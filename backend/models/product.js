@@ -3,7 +3,7 @@ const db = require('../config/database');
 
 class Product {
   static async getAllProducts() {
-    const query = 'SELECT * FROM products ORDER BY created_at DESC';
+    const query = 'SELECT * FROM usuarios ORDER BY created_at DESC';
     const { rows } = await db.query(query);
     return rows;
   }
