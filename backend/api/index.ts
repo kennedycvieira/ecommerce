@@ -1,6 +1,6 @@
 import { getProducts } from "../models/product";
 
-const express = require("express");"
+const express = require("express");
 const app = express();
 
 app.get("/", (req, res) => res.send("Express on Vercel"));
