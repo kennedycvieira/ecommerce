@@ -1,4 +1,4 @@
-import { Pool } from "pg";
+const { Pool } = require('pg')
 require('dotenv').config();
 
 const pool = new Pool({
@@ -8,14 +8,14 @@ const pool = new Pool({
   port: 5432,
   database: process.env.db_dbname,
 });
-
+/*
 export default async function runCommand() {
   const client = await pool.connect();
   const data = await client.query("${COMMAND}");
   await client.release();
   return data;
 }
-
+*/
 module.exports = {
     query: (text, params) => pool.query(text, params),
   };
